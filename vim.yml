@@ -1,0 +1,16 @@
+---
+- name: Setup vim
+  hosts: localhost
+
+  tasks:
+  - name: Install vim via homebrew
+    homebrew:
+      name: vim
+
+  - name: Setup vimrc
+    file:
+      src: "~/dotfiles/files/vim/.vimrc"
+      dest: "~/.vimrc"
+      state: link
+      force: yes
+      follow: false

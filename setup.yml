@@ -1,0 +1,10 @@
+---
+- name: Setup Your Macbook
+  hosts: localhost
+
+  tasks:
+    - name: Setup Vim
+      command: ansible-playbook vim.yml
+
+    - name: Setup Git Configs
+      command: ansible-playbook git.yml
